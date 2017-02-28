@@ -3,7 +3,9 @@ program wuclient;
 //  Binds PUB socket to tcp://*:5556
 //  Publishes random weather updates
 //
-{$APPTYPE CONSOLE}
+{$ifdef MSWINDOWS}
+  {$APPTYPE CONSOLE}
+{$endif}
 
 uses
   Classes, SysUtils, zmq, zmq_utils;
